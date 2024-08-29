@@ -1,0 +1,136 @@
+const fluid = require('fluid-tailwind').default;
+const { extract } = require('fluid-tailwind');
+const defaultTheme = require('tailwindcss/defaultTheme');
+
+module.exports = {
+    content: {
+        files: [
+            './index.php', 
+            './app/**/*.php', 
+            './resources/**/*.{php,vue,js}'
+        ],
+        extract
+    },
+    theme: {
+        extend: {
+            fontFamily: {
+                body: ['"Poppins"', ...defaultTheme.fontFamily.sans],
+                awesome: ['"FontAwesome"'],
+            },
+            fontSize: {
+                12: ['12px', '18px'],
+                14: ['14px', '20px'],
+                16: ['16px', '24px'],
+                18: ['18px', '29px'],
+                20: ['20px', '30px'],
+                24: ['24px', '36px'],
+                28: ['28px', '1.1'],
+                30: ['30px', '1.1'],
+                36: ['36px', '1.1'],
+                48: ['48px', '1.1'],
+                60: ['60px', '1.1'],
+                74: ['74px', '1.1'],
+                78: ['78px', '1.1'],
+            },
+            fontWeight: {
+                light: '300',
+                normal: '400',
+                medium: '500',
+                semibold: '600',
+                bold: '700',
+            },
+            screens: {
+                xs: '375px',
+                sm: '640px',
+                md: '768px',
+                lg: '1024px',
+                xl: '1280px',
+                '2xl': '1600px',
+                '3xl': '1920px',
+            },
+            colors: {
+                white: '#FFFFFF',
+                black: '#000000',
+                
+                gray: {
+                    50: '#F9FAFB',
+                    100: '#F3F4F6',
+                    200: '#E5E7EB',
+                    300: '#D1D5DB',
+                    400: '#9CA3AF',
+                    500: '#6B7280',
+                    600: '#4B5563',
+                    700: '#374151',
+                    800: '#374151',
+                    900: '#111827',
+                },
+                red: {
+                    50: '#FEF2F2',
+                    100: '#FEE2E2',
+                    200: '#FECACA',
+                    300: '#FCA5A5',
+                    400: '#F87171',
+                    500: '#EF4444',
+                    600: '#DC2626',
+                    700: '#B91C1C',
+                    800: '#991B1B',
+                    900: '#7F1D1D',
+                },
+                yellow: {
+                    50: '#FFFBEB',
+                    100: '#FEF3C7',
+                    200: '#FDE68A',
+                    300: '#FCD34D',
+                    400: '#FBBF24',
+                    500: '#F59E0B',
+                    600: '#D97706',
+                    700: '#B45309',
+                    800: '#92400E',
+                    900: '#78350F',
+                },
+                green: {
+                    50: '#ECFDF5',
+                    100: '#D1FAE5',
+                    200: '#A7F3D0',
+                    300: '#6EE7B7',
+                    400: '#34D399',
+                    500: '#10B981',
+                    600: '#059669',
+                    700: '#047857',
+                    800: '#065F46',
+                    900: '#064E3B',
+                },
+                blue: {
+                    50: '#f5faff',
+                    100: '#f0f6ff',
+                    200: '#e3ebff',
+                    300: '#d5dbff',
+                    400: '#A8BCF5',
+                    500: '#7a8cf0',
+                    600: '#6475d9',
+                    700: '#4453b2',
+                    800: '#1D4289',
+                    900: '#18397d',
+                },
+                purple: {
+                    50: '#faf2fa',
+                    100: '#F5e9f5',
+                    200: '#efdaf0',
+                    300: '#e7cae8',
+                    400: '#D7AEE8',
+                    500: '#C79EDE',
+                    600: '#97439c',
+                    700: '#6c1571',
+                    800: '#5e1166',
+                    900: '#480c54',
+                },
+            },
+        },
+    },
+    plugins: [
+        require('@tailwindcss/typography'),
+        require('@tailwindcss/forms'),
+        require('@tailwindcss/aspect-ratio'),
+        fluid(),
+    ]
+}
