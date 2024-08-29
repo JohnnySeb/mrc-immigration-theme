@@ -25,7 +25,6 @@
     "@roots/bud-stylelint": "6.23.3",
     "@roots/bud-tailwindcss": "6.23.3",
     "@roots/sage": "6.23.3",
-    "@tailwindcss/aspect-ratio": "^0.4.2",
     "eslint": "^8.39.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-node": "^4.1.0",
@@ -36,15 +35,17 @@
     "eslint-plugin-prettier": "^4.2.1",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-react-hooks": "^4.6.0",
-    "fluid-tailwind": "^1.0.3",
     "prettier": "^2.8.8",
     "stylelint": "^15.7.0",
     "stylelint-config-standard": "^31.0.0"
   },
   "dependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
     "@tailwindcss/forms": "^0.5.7",
     "@tailwindcss/typography": "^0.5.12",
     "alpinejs": "^3.12.2",
-    "axe-core": "^4.7.2"
+    "axe-core": "^4.7.2",
+    "fluid-tailwind": "^1.0.3",
+    "tailwindcss": "^3.4.10"
   }
 }

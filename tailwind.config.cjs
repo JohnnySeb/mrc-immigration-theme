@@ -1,15 +1,18 @@
+const defaultTheme = require('tailwindcss/defaultTheme');
+const typography = require('@tailwindcss/typography');
+const forms = require('@tailwindcss/forms');
+const aspectRatio = require('@tailwindcss/aspect-ratio');
 const fluid = require('fluid-tailwind').default;
 const { extract } = require('fluid-tailwind');
-const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
     content: {
         files: [
-            './index.php', 
-            './app/**/*.php', 
-            './resources/**/*.{php,vue,js}'
+            './index.php',
+            './app/**/*.php',
+            './resources/**/*.{php,vue,js}',
         ],
-        extract
+        extract,
     },
     theme: {
         extend: {
@@ -51,7 +54,6 @@ module.exports = {
             colors: {
                 white: '#FFFFFF',
                 black: '#000000',
-                
                 gray: {
                     50: '#F9FAFB',
                     100: '#F3F4F6',
@@ -127,10 +129,5 @@ module.exports = {
             },
         },
     },
-    plugins: [
-        require('@tailwindcss/typography'),
-        require('@tailwindcss/forms'),
-        require('@tailwindcss/aspect-ratio'),
-        fluid(),
-    ]
-}
+    plugins: [typography, forms, aspectRatio, fluid()],
+};
