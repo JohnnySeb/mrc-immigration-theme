@@ -25,8 +25,24 @@ document.addEventListener('DOMContentLoaded', () => {
     // MOBILE NAV
     const burger = document.querySelector('.burger');
     const curtain = document.querySelector('.curtain');
-    const mobileSubTriggers = document.querySelectorAll('.nav-mobile .menu-item-has-children');
-    const mobileSubmenu = document.querySelectorAll('.nav-mobile .menu-item-has-children ul');
+    const mobileSubTriggers = document.querySelectorAll(
+        '.nav-mobile .menu-item-has-children'
+    );
+    const mobileSubmenu = document.querySelectorAll(
+        '.nav-mobile .menu-item-has-children ul'
+    );
+
+    function toggleMobileMenu() {
+        document.body.classList.toggle('menu-shown');
+
+        mobileSubmenu.forEach((submenu) => {
+            submenu.style.setProperty('max-height', '0px');
+        });
+
+        mobileSubTriggers.forEach((trigger) => {
+            trigger.classList.remove('active');
+        });
+    }
 
     // BURGER TRIGGER
     burger.addEventListener('click', () => {
@@ -46,24 +62,12 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (trigger.classList.contains('active')) {
                     submenu.style.maxHeight = 0;
                 } else {
-                    submenu.style.maxHeight = submenu.scrollHeight + 'px';
+                    submenu.style.maxHeight = `${submenu.scrollHeight}px`;
                 }
 
                 e.preventDefault();
                 e.target.classList.toggle('active');
             });
-        });
-    }
-
-    function toggleMobileMenu() {
-        document.body.classList.toggle('menu-shown');
-
-        mobileSubmenu.forEach((submenu) => {
-            submenu.style.maxHeight = 0;
-        });
-
-        mobileSubTriggers.forEach((trigger) => {
-            trigger.classList.remove('active');
         });
     }
 });

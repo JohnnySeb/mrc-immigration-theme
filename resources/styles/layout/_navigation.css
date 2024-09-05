@@ -1,5 +1,4 @@
-/* stylelint-disable no-duplicate-selectors */
-/* stylelint-disable selector-class-pattern */
+/* stylelint-disable no-descending-specificity */
 .navigation {
   @apply fixed bg-white top-0 left-0 translate-y-0 w-full duration-500 z-[666];
 
