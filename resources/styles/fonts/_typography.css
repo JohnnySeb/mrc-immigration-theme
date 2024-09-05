@@ -1,75 +1,201 @@
 /* stylelint-disable no-descending-specificity */
 body {
-  @apply font-body text-blue-900 text-16 md:text-18;
-
-  h1, .h1,
-  h2, .h2,
-  h3, .h3 {
-    line-height: 1.1 !important;
-  }
+  @apply font-body text-blue-800 ~text-sm/xl;
 }
 
 h1,
 .h1 {
-  @apply relative block mb-10 lg:mb-12 text-36 md:text-48 lg:text-60 xl:text-74;
+  @apply relative block mb-10 lg:mb-12 ~text-4xl/6xl 3xl:text-7xl font-semibold;
 }
 
 h2,
 .h2 {
-  @apply relative block mb-4 lg:mb-10 text-28 md:text-30 lg:text-36 xl:text-48;
+  @apply relative block mb-4 lg:mb-7 ~text-3xl/5xl 3xl:text-6xl font-semibold;
 }
 
 h3,
 .h3 {
-  @apply relative block mb-2 lg:mb-7 text-24 md:text-28 lg:text-30 xl:text-36;
+  @apply relative block mb-2 lg:mb-7 ~text-2xl/4xl 3xl:text-5xl font-semibold;
 }
 
-p,
-li:not(nav li) {
-  a {
-    @apply font-bold;
+h4,
+.h4 {
+  @apply relative block mb-2 lg:mb-7 ~text-xl/3xl 3xl:text-4xl font-semibold;
+}
 
-    background: linear-gradient(to right, #39FFBA, #39FFBA), linear-gradient(to right, #000F5A, #000F5A);
-    background-size:
-    100% 2px,
-    0 2px;
-    background-position:
-    100% 100%,
-    0 100%;
-    background-repeat: no-repeat;
-    transition:
-    background-size 0.5s ease-in-out,
-    color 0.4s;
-
-    &:hover,
-    &:focus {
-      background-size:
-        0 2px,
-        100% 2px;
-    }
-  }
-
+/* BACKGROUND ON STRONG TAGS */
+h1, h2, h3, h4, .h1, .h2, .h3, .h4 {
   strong {
-    @apply font-semibold;
+    @apply font-semibold px-2;
+
+    line-height: 1.8 !important;
+    background: linear-gradient(to right, #fff, #fff), linear-gradient(to right, #efdaf0, #efdaf0);
+    background-size: 100% 100%, 0 100%;
+    background-position: 100% 100%, 0 100%;
+    background-repeat: no-repeat;
+    transition: background-size 0s;
   }
-}
-
-ul:not(nav ul) {
-  @apply list-none mb-7;
-
-  li {
-    @apply relative inline-block w-full py-1 pl-5 leading-8;
-
-    &::before {
-      top: 1.1rem;
-
-      @apply content-[''] absolute left-0 block h-1.5 w-1.5 rounded-full bg-blue-900;
+  
+  &.alive {
+    strong {
+      background-size: 0 100%, 100% 100%;
+      transition: background-size 0.5s 0.3s ease-in-out;
     }
   }
 }
 
-p, ul, ol {
-  & + p, & + h1, & + h2, & + h3, & + ul, & + ol {
-    @apply mt-7;
+section {
+  p,
+  li {
+    a {
+      @apply font-semibold;
+
+      background: linear-gradient(to right, #1D4289, #1D4289), linear-gradient(to right, #D7AEE8, #D7AEE8);
+      background-size: 100% 1px, 0 1px;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0.5s ease-in-out, color 0.3s;
+
+      &:hover,
+      &:focus {
+        @apply text-purple-400;
+
+        background-size: 0 1px, 100% 1px;
+      }
+    }
+
+    strong {
+      @apply font-semibold;
+    }
+  }
+
+  ul {
+    @apply list-none mb-7;
+  
+    li {
+      @apply relative inline-block w-full py-1 pl-5 leading-8;
+  
+      &::before {
+        top: 1.1rem;
+  
+        @apply content-[''] absolute left-0 block h-1 w-1 rounded-full bg-blue-900;
+      }
+    }
+  }
+
+  ol {
+    @apply list-decimal list-inside mb-7;
+
+    li {
+      @apply py-1 leading-8;
+
+      &::before {
+        @apply content-[''] inline-block w-2;
+      }
+    }
+  }
+
+  p, ul, ol {
+    & + p, & + h1, & + h2, & + h3, & + ul, & + ol {
+      @apply mt-7;
+    }
+  }
+}
+
+.bg-blue-800,
+.bg-purple-700 {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    @apply text-white;
+
+    strong {
+      background: linear-gradient(to right, #6c1571, #6c1571), linear-gradient(to right, #6475D9, #6475D9);
+      background-size: 100% 100%, 0 100%;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0s;
+    }
+    
+    &.alive {
+      strong {
+        background-size: 0 100%, 100% 100%;
+        transition: background-size 0.5s 0.3s ease-in-out;
+      }
+    }
+  }
+
+  p,
+  li {
+    a {
+      background: linear-gradient(to right, #FFF, #FFF), linear-gradient(to right, #D7AEE8, #D7AEE8);
+      background-size:
+      100% 1px,
+      0 1px;
+      background-position:
+      100% 100%,
+      0 100%;
+      background-repeat: no-repeat;
+      transition:
+      background-size 0.5s ease-in-out,
+      color 0.3s;
+
+      &:hover,
+      &:focus {
+        @apply text-purple-400;
+
+        background-size:
+          0 1px,
+          100% 1px;
+      }
+    }
+  }
+
+  p, ul, ol {
+    @apply text-white;
+  }
+
+  ul {
+    li {
+      &::before {
+        @apply bg-white;
+      }
+    }
+  }
+}
+
+.bg-blue-800 {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    strong {
+      background: linear-gradient(to right, #1D4289, #1D4289), linear-gradient(to right, #97439C, #97439C);
+      background-size: 100% 100%, 0 100%;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0s;
+    }
+    
+    &.alive {
+      strong {
+        background-size: 0 100%, 100% 100%;
+        transition: background-size 0.5s 0.3s ease-in-out;
+      }
+    }
+  }
+}
+
+.bg-blue-100 {
+  h1, .h1, h2, .h2, h3, .h3, h4, .h4 {
+    strong {
+      background: linear-gradient(to right, #f0f6ff, #f0f6ff), linear-gradient(to right, #efdaf0, #efdaf0);
+      background-size: 100% 100%, 0 100%;
+      background-position: 100% 100%, 0 100%;
+      background-repeat: no-repeat;
+      transition: background-size 0s;
+    }
+    
+    &.alive {
+      strong {
+        background-size: 0 100%, 100% 100%;
+        transition: background-size 0.5s 0.3s ease-in-out;
+      }
+    }
   }
 }

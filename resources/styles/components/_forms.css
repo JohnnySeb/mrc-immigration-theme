@@ -14,7 +14,7 @@ body {
     }
 
     .gfield_label {
-        @apply font-medium text-14 md:text-16 text-blue-900 !important;
+        @apply font-medium text-sm md:text-base text-blue-900 !important;
     }
 
     .gform_required_legend {
@@ -114,7 +114,7 @@ body {
     }
 
     .gform_button, input[type="submit"] {
-        @apply inline-block relative text-16 xl:text-18 py-2 lg:py-3 px-5 lg:px-7 overflow-hidden font-medium duration-500 hover:drop-shadow-md hover:bg-blue-900 hover:text-white rounded-full bg-green-500 text-blue-900 cursor-pointer mt-4 !important;
+        @apply inline-block relative text-base xl:text-lg py-2 lg:py-3 px-5 lg:px-7 overflow-hidden font-medium duration-500 hover:drop-shadow-md hover:bg-blue-900 hover:text-white rounded-full bg-green-500 text-blue-900 cursor-pointer mt-4 !important;
     }
 
     .gform_confirmation_wrapper {

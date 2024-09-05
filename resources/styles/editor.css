@@ -3,7 +3,7 @@
 @import "tailwindcss/utilities";
 
 .is-desktop-preview {
-    @apply font-body text-16;
+    @apply font-body text-base;
 
     /* LAYOUT */
     section {

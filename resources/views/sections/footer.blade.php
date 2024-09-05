@@ -1,13 +1,11 @@
-<footer class="content-info">
-  @php(dynamic_sidebar('sidebar-footer'))
-
+{{-- <footer class="content-info">
   <a
     href="https://www.agencetolle.com/"
     target="_blank"
     title="<?= __('Tollé Web Agency - Application and website development','tolle') ?>"
     class="group flex items-center duration-300 mt-3 xs:mt-0" 
   >
-    <span class="text-14 text-white mr-2 xs:group-hover:opacity-75 xs:opacity-0 duration-500 xs:group-hover:translate-x-0 xs:translate-x-[10%] origin-right">
+    <span class="text-sm text-white mr-2 xs:group-hover:opacity-75 xs:opacity-0 duration-500 xs:group-hover:translate-x-0 xs:translate-x-[10%] origin-right">
         <?= __('Website by','tolle') ?>
     </span>
 
@@ -20,4 +18,4 @@
         <path d="M12.7528 6.87599C11.3334 6.84246 9.9699 7.37893 8.96402 8.37364C7.96931 9.33482 7.42166 10.6648 7.44402 12.0507C7.42166 13.4366 7.96931 14.7666 8.95284 15.7278C9.95872 16.7225 11.3334 17.2701 12.7528 17.2254C14.1723 17.2589 15.547 16.7225 16.5528 15.7278C17.5475 14.7666 18.0952 13.4366 18.0728 12.0507C18.0952 10.6648 17.5475 9.34599 16.5528 8.38482C15.547 7.39011 14.1723 6.84246 12.7528 6.88717V6.87599ZM15.044 14.4201C14.4405 15.0236 13.6134 15.3589 12.7528 15.3366C11.8923 15.3589 11.0652 15.0236 10.4728 14.4201C9.85814 13.7831 9.53402 12.9336 9.56755 12.0507C9.53402 11.1678 9.85813 10.3183 10.4617 9.68129C11.0652 9.07776 11.8923 8.74246 12.7528 8.76482C13.6134 8.74246 14.4405 9.06658 15.044 9.68129C15.6475 10.3183 15.9828 11.1678 15.9493 12.0507C15.9828 12.9336 15.6587 13.7831 15.044 14.4201Z" fill="white"/>
     </svg>
   </a>
-</footer>
+</footer> --}}

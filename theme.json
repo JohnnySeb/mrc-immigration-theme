@@ -1299,123 +1299,58 @@
       ],
       "fontSizes": [
         {
-          "name": "12",
-          "size": "12px",
-          "slug": "12"
-        },
-        {
-          "name": "14",
-          "size": "14px",
-          "slug": "14"
-        },
-        {
-          "name": "16",
-          "size": "16px",
-          "slug": "16"
-        },
-        {
-          "name": "18",
-          "size": "18px",
-          "slug": "18"
-        },
-        {
-          "name": "20",
-          "size": "20px",
-          "slug": "20"
-        },
-        {
-          "name": "24",
-          "size": "24px",
-          "slug": "24"
-        },
-        {
-          "name": "28",
-          "size": "28px",
-          "slug": "28"
-        },
-        {
-          "name": "30",
-          "size": "30px",
-          "slug": "30"
-        },
-        {
-          "name": "36",
-          "size": "36px",
-          "slug": "36"
-        },
-        {
-          "name": "48",
-          "size": "48px",
-          "slug": "48"
-        },
-        {
-          "name": "60",
-          "size": "60px",
-          "slug": "60"
-        },
-        {
-          "name": "74",
-          "size": "74px",
-          "slug": "74"
-        },
-        {
-          "name": "78",
-          "size": "78px",
-          "slug": "78"
-        },
-        {
           "name": "xs",
-          "size": "0.75rem",
+          "size": "12px",
           "slug": "xs"
         },
         {
           "name": "sm",
-          "size": "0.875rem",
+          "size": "14px",
           "slug": "sm"
         },
         {
           "name": "base",
-          "size": "1rem",
+          "size": "16px",
           "slug": "base"
         },
         {
           "name": "lg",
-          "size": "1.125rem",
+          "size": "18px",
           "slug": "lg"
         },
         {
           "name": "xl",
-          "size": "1.25rem",
+          "size": "20px",
           "slug": "xl"
         },
         {
           "name": "2xl",
-          "size": "1.5rem",
+          "size": "24px",
           "slug": "2xl"
         },
         {
           "name": "3xl",
-          "size": "1.875rem",
+          "size": "30px",
           "slug": "3xl"
         },
         {
           "name": "4xl",
-          "size": "2.25rem",
+          "size": "36px",
           "slug": "4xl"
         },
         {
           "name": "5xl",
-          "size": "3rem",
+          "size": "48px",
           "slug": "5xl"
         },
         {
           "name": "6xl",
-          "size": "3.75rem",
+          "size": "60px",
           "slug": "6xl"
         },
         {
           "name": "7xl",
-          "size": "4.5rem",
+          "size": "72px",
           "slug": "7xl"
         },
         {
@@ -1427,6 +1362,11 @@
           "name": "9xl",
           "size": "8rem",
           "slug": "9xl"
+        },
+        {
+          "name": "xxs",
+          "size": "10px",
+          "slug": "xxs"
         }
       ]
     }

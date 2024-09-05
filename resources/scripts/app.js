@@ -19,5 +19,5 @@ import.meta.webpackHot?.accept(console.error); // eslint-disable-line no-console
 
 // import './_accordions.js';
 import './_bodyLoad.js';
-// import './_insight.js';
+import './_insight.js';
 import './_navigation.js';

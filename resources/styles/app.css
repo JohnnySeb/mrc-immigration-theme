@@ -4,6 +4,7 @@
 
 /* LAYOUT */
 @import "./layout/_general.css";
+@import "./layout/_navigation.css";
 
 /* TYPO */
 @import "./fonts/_fontfaces.css";
@@ -11,5 +12,7 @@
 
 /* ANIMATIONS */
 @import "./animations/_burger.css";
+@import "./animations/_insight.css";
 
 /* COMPONENTS */
+@import "./components/_button.css";

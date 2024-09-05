@@ -8,7 +8,7 @@
 
   </head>
 
-  <body <?php body_class(); ?>>
+  <body <?php body_class(); ?> style="opacity: 0">
     <?php wp_body_open(); ?>
     <?php do_action('get_header'); ?>
 

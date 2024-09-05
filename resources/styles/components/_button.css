@@ -7,37 +7,23 @@
 }
 
 .btn {
-    @apply inline-block relative text-16 xl:text-18 py-2 lg:py-3 px-5 lg:px-7 overflow-hidden duration-500 hover:drop-shadow-md;
+    @apply inline-block relative py-2 lg:py-3 px-5 lg:px-7 overflow-hidden bg-white border border-blue-900 rounded-full;
+
+    &::before {
+        @apply content-[''] absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-px h-px rounded-full bg-purple-600 opacity-0;
+
+        transition: all 0.2s 0.2s, opacity 0.2s;
+    }
 
     .btn-text {
         @apply relative font-medium pointer-events-none z-20;
     }
 
-    .bubble {
-        @apply hidden lg:block absolute rounded-full w-[1px] h-[1px] bg-green-300 opacity-0 -translate-y-1/2 -translate-x-1/2 pointer-events-none will-change-transform z-10;
+    &:hover {
+        &::before {
+            @apply w-full h-full bg-purple-100 opacity-100;
 
-        transition: opacity 0.5s, height 0s 0.5s, width 0s 0.5s;
-
-        &.show-bubble{
-            @apply w-[80px] h-[80px] opacity-100;
-
-            transition: opacity 0.5s, height 0.7s, width 0.7s;
+            transition: all 0.3s;
         }
-    }
-
-    &--smaller {
-        @apply pt-0.5 pb-1 lg:py-1.5 xl:pt-2 xl:pb-2 px-3 xl:px-6 lg:px-4
-    }
-
-    &--rounded {
-        @apply rounded-full;
-    }
-
-    &--square {
-        @apply rounded-[10px];
-    }
-
-    &--green {
-        @apply bg-green-500 text-blue-900;
     }
 }

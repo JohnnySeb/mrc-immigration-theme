@@ -6,7 +6,7 @@
         @apply relative flex justify-between py-7 pr-[60px] cursor-pointer;
 
         p {
-            @apply text-blue-900 text-18 md:text-20 font-medium duration-300;
+            @apply text-blue-900 text-lg md:text-xl font-medium duration-300;
         }
 
         .plusMinus {

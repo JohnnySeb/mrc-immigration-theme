@@ -106,3 +106,27 @@ function acf_populate_gf_forms_ids($field)
 }
 
 add_filter('acf/load_field/name=gravity_form_id', 'acf_populate_gf_forms_ids');
+
+// Ajout d'un icône dans le menu
+class Custom_Walker_Nav_Menu extends Walker_Nav_Menu {
+    function start_lvl(&$output, $depth = 0, $args = null) {
+        $indent = str_repeat("\t", $depth);
+        $output .= "\n$indent<ul class=\"sub-menu\">\n";
+    }
+
+    function start_el(&$output, $item, $depth = 0, $args = null, $id = 0) {
+        $menu_icon = get_field('menuIcon', $item);
+
+        $classes = empty($item->classes) ? array() : (array) $item->classes;
+        $class_names = join(' ', apply_filters('nav_menu_css_class', array_filter($classes), $item, $args));
+
+        $output .= '<li class="' . esc_attr($class_names) . '">';
+
+        $icon_html = '';
+        if (!empty($menu_icon)) {
+            $icon_html = '<i class="' . esc_attr($menu_icon) . '"></i> ';
+        }
+
+        $output .= '<a href="' . esc_url($item->url) . '">' . '<span class="icon">' . $icon_html . '</span>' . '<span class="text">' . esc_html($item->title) . '</span>' . '</a>';
+    }
+}

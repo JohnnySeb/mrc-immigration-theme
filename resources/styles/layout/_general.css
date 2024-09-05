@@ -6,7 +6,7 @@ html {
 }
 
 body {
-    @apply bg-white transition-opacity duration-500;
+    @apply bg-white transition-opacity !pt-[65px] md:!pt-[150px] duration-500;
 
     &.loaded {
         opacity: 1 !important;
@@ -34,10 +34,10 @@ section {
 }
 
 /* PADDING Y */
-.padd {
+body .padd {
     @apply py-10 md:py-14 lg:py-20 xl:py-24;
 
-    &--small {
+    &.--small {
         @apply py-7 md:py-8 lg:py-10;
     }
 
@@ -45,29 +45,37 @@ section {
         @apply pt-0;
     }
 
-    &--top {
+    &.--top {
         @apply pb-0;
     }
 
-    &--bottom {
+    &.--bottom {
         @apply pt-0;
     }
 }
 
 /* PADDING X */
 body .wrap {
-    @apply !px-4 md:!px-8 xl:!px-10 2xl:!px-20;
+    @apply px-4 md:px-8 xl:px-10 2xl:px-20;
 
-    &--left {
-        @apply !pr-0;
+    &.--left {
+        @apply pr-0;
     }
 
-    &--right {
-        @apply !pl-0;
+    &.--right {
+        @apply pl-0;
     }
 }
 
 section.bg-white + section.bg-white .padd {
+    @apply pt-0;
+}
+
+section.bg-blue-800 + section.bg-blue-800 .padd {
+    @apply pt-0;
+}
+
+section.bg-purple-700 + section.bg-purple-700 .padd {
     @apply pt-0;
 }
 
@@ -81,14 +89,14 @@ section.bg-white + section.bg-white .padd {
     }
 
     ::-webkit-scrollbar-track {
-        @apply bg-blue-900;
+        @apply bg-blue-800;
     }
 
     ::-webkit-scrollbar-thumb {
-        @apply bg-green-500 rounded-full;
+        @apply bg-white rounded-full;
     }
 
     *::selection {
-        @apply bg-blue-900 text-green-500;
+        @apply bg-blue-200 text-blue-800;
     }
 }
